@@ -1,7 +1,10 @@
 import React from "react";
+import Menu from "./Menu";
 const Boody = () =>{
     return(
-       <div></div>
+       <div>
+        <Menu />
+       </div>
     )
 }
 export default Boody;
