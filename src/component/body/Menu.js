@@ -8,6 +8,7 @@ class Menu extends Component {
         selectDish:null
     }
     onSelectDish =(dish)=>{
+        console.log(dish);
        this.setState({selectDish:dish})
             }
     render() {
@@ -20,13 +21,20 @@ class Menu extends Component {
             );
            
         })
+
+        let dishItem=null;
+        if(this.state.selectDish!=null){
+            dishItem=<DishItem dish={this.state.selectDish} />
+        }
         return(
             <div className="container">
                 <div className="row">
                     <div className="col-6">
                         {menu}
                     </div>
-
+                <div className="col-6">
+                    {dishItem}
+                </div>
                 </div>
             </div>
         );
